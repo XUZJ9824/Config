@@ -107,3 +107,27 @@ cd ./config
 ls
 ls
 alias
+cp ~/.bash* ./
+git commit -m " "
+rm ./.git/index.lock 
+git commit -m " "
+git push https://github.com/XUZJ9824/Config.git master
+git status
+git add ./
+git add
+git add ./*
+git status
+git push https://github.com/XUZJ9824/Config.git master
+git status
+git push origin remote
+git push https://github.com/XUZJ9824/Config.git master
+pwd
+git pull
+git status
+git branch -r
+git push https://github.com/XUZJ9824/Config.git master
+git push https://github.com/XUZJ9824/Config.git master:master
+git status
+git push https://github.com/XUZJ9824/Config.git master:master
+git push origin master:master
+git status
