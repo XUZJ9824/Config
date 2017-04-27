@@ -68,7 +68,9 @@ shopt -s cdspell
 # Don't put duplicate lines in the history.
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 
-export PS1='[\u@ \W]\$ '
+#export PS1='[\u@ \W]\$ '
+
+export PS1="\[\033[1;37;31m\u@\033[0;33;32m\W\\[\e[0m\]] \\$"
 #
 # Ignore some controlling instructions
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
