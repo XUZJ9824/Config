@@ -7,7 +7,7 @@
     
     ;; Meta
     (global-set-key "\M- " 'set-mark-command)
-    (global-set-key "\M-\C-h" 'backward-kill-word)
+    ;;(global-set-key "\M-\C-h" 'backward-kill-word)
     (global-set-key "\M-\C-r" 'query-replace)
     (global-set-key "\M-r" 'replace-string)
     (global-set-key "\M-g" 'goto-line)
@@ -51,7 +51,18 @@
     (global-set-key [C-end] "\M->")
     (global-set-key [C-prior] "\M-<")
     (global-set-key [C-next] "\M->")
-    
+
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/fuzzy-el-master")
+(add-to-list 'load-path "~/.emacs.d/popup-el-master")
+(add-to-list 'load-path "~/.emacs.d/auto-save-list")
+
+;;auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories
+	     "path-to-download-folder/auto-complete/dict")
+(ac-config-default)
+
     ;; Mouse
     (global-set-key [mouse-3] 'imenu)
     
@@ -67,6 +78,8 @@
     ;; Load packages
     (require 'desktop)
     (require 'tar-mode)
+
+
     
     ;; Pretty diff mode
     (autoload 'ediff-buffers "ediff" "Intelligent Emacs interface to diff" t)
